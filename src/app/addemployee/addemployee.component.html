@@ -1,0 +1,35 @@
+<p-panel header="Employee Database">
+    <h3>First Name</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="text" [(ngModel)]="firstname" size="30" pInputText required >
+    <label for="float-input">First Name</label>
+</span>
+<h3>Last Name</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="text" [(ngModel)]="lastname" size="30" pInputText required> 
+    <label for="float-input">Last Name</label>
+</span>
+<h3>Age</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="text" size="30" [(ngModel)]="age" pInputText required> 
+    <label for="float-input">Age</label>
+</span>
+<h3 class="first">Country</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="text" size="30" [(ngModel)]="country" pInputText required> 
+    <label for="float-input">Country</label>
+</span>
+<h3 class="first">Gender</h3>
+<span class="ui-float-label">
+    <select [(ngModel)]="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+
+</span>
+<p-footer>
+    <button pButton type="button" label="Submit" icon="pi pi-check" style="margin-right: .25em" (click)="saveEmployee()"></button>
+    <button pButton type="button" label="Cancel" icon="pi pi-times" class="ui-button-secondary" (click)="cancelEmployee()"></button>
+</p-footer>
+  </p-panel>
+  

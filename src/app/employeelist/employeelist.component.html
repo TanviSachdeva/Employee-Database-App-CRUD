@@ -1,0 +1,10 @@
+Search: <input id="input" type="text" size="30" pInputText [(ngModel)]="searchKey">
+<button pButton type="button" label="Add New" class="left" style="margin-right: .25em" (click)="addEmployee()"></button>
+<button pButton type="button" label="View" class="left" style="margin-right: .25em" (click)="viewEmployee()"></button>
+<br/><br/>
+<p-panel header="Employee Database" *ngIf="viewClicked">
+  <div *ngFor='let employee of filteredList'>
+      <app-employeedetail [employee]='employee' (refreshEmployeeList)="refreshList()">
+        </app-employeedetail>
+  </div>
+</p-panel>
